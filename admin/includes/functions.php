@@ -1,5 +1,15 @@
 <?php
 
+function comfirm($result)
+{
+    global $connection;
+
+    if (!$result) {
+        echo "here2";
+        die("QUERY FAILED" . mysqli_error($connection));
+    }
+}
+
 function insert_Categories()
 {
     global $connection;
