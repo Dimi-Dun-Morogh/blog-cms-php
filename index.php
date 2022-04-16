@@ -29,7 +29,19 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
     $post_author = $row['post_author'];
     $post_date = $row['post_date'];
     $post_image = $row['post_image'];
+    $post_status = $row['post_status'];
     $post_content = substr($row['post_content'], 0,100);
+
+    if($post_status !=='published'){
+        echo "<h1 class='text-center'>NO POST HERE SORRY </h1>";
+    } else {
+
+
+
+
+
+
+
 
     ?>
 
@@ -57,7 +69,7 @@ while ($row = mysqli_fetch_assoc($select_all_posts_query)) {
 
 <?php
 
-}
+}}
 
 ?>
 
